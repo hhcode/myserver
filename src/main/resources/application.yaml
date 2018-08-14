@@ -1,0 +1,30 @@
+# 日志
+logging:
+  file: ./logback.log
+  level:
+    com.huang.myservice: debug
+    kafka: warn
+    org: warn
+
+# kafka连接信息
+kafka:
+  zookeeper_connect: 101.132.110.227:2181
+  group_id: myservice
+  metadata_broker_list: 101.132.110.227:9092
+
+# redis配置
+redis:
+  url: redis://10.29.0.229:6379
+  password: 
+  maxConnectRedis: 50
+  maxWaitRedis: 1000
+
+common: 
+  # 默认编码
+  default_charset: utf-8
+  # 订阅并接收topic的线程数
+  mq_subscribe_connect_num: 3
+  # 处理topic消息的线程数
+  consumer_thread_num: 3
+  # topic 队列大小
+  queue_size: 300
